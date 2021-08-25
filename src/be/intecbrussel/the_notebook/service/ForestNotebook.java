@@ -63,7 +63,8 @@ public class ForestNotebook {
             }
         }
         if (inNotebook) {
-            System.out.println("Animal already in notebook.");
+            System.out.println();
+            System.out.println("Animal [" + animal.getName() +"] already in notebook.");
         } else {
             animals.add(animal);
             animalCount++;
@@ -91,7 +92,8 @@ public class ForestNotebook {
             }
         }
         if (inNotebook2) {
-            System.out.println("Plant already in notebook.");
+            System.out.println();
+            System.out.println("Plant [" + plant.getName() +"] already in notebook.");
         } else {
             plants.add(plant);
             plantCount++;
@@ -126,6 +128,7 @@ public class ForestNotebook {
     }
 
     public void sortAnimalsByName() {
+        System.out.println();
         System.out.println("Animals being sorted...");
         herbivores = herbivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
         carnivores = carnivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
@@ -133,6 +136,7 @@ public class ForestNotebook {
     }
 
     public void sortPlantsByName() {
+        System.out.println();
         System.out.println("Plants being sorted...");
         plants = plants.stream().sorted(Comparator.comparing(Plant::getName)).collect(Collectors.toList());
     }

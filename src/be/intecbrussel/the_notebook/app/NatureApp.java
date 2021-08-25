@@ -13,7 +13,6 @@ public class NatureApp {
         ForestNotebook notebook = new ForestNotebook();
 
         //Adding 5 plants (at least 1 in each category)
-
         Flower plant1 = new Flower("rose");
         notebook.addPlant(plant1);
         plant1.setHeight(10);
@@ -94,7 +93,9 @@ public class NatureApp {
         notebook.addAnimal(animal10);
 
         //Split output for easy recognition
+        System.out.println();
         System.out.println("///////////////////");
+        System.out.println();
 
         //Print sorted notebook
         notebook.printNotebook();

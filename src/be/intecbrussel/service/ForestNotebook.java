@@ -126,12 +126,14 @@ public class ForestNotebook {
     }
 
     public void sortAnimalsByName() {
+        System.out.println("Animals being sorted...");
         herbivores = herbivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
         carnivores = carnivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
         omnivores = omnivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
     }
 
     public void sortPlantsByName() {
+        System.out.println("Plants being sorted...");
         plants = plants.stream().sorted(Comparator.comparing(Plant::getName)).collect(Collectors.toList());
     }
 

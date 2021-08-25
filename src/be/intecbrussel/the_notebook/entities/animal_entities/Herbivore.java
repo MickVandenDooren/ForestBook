@@ -1,6 +1,6 @@
-package be.intecbrussel.entities.animal_entities;
+package be.intecbrussel.the_notebook.entities.animal_entities;
 
-import be.intecbrussel.entities.plant_entities.Plant;
+import be.intecbrussel.the_notebook.entities.plant_entities.Plant;
 import java.util.*;
 import java.util.stream.Stream;
 

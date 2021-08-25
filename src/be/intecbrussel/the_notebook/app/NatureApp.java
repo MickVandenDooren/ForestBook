@@ -1,8 +1,8 @@
-package be.intecbrussel.app;
+package be.intecbrussel.the_notebook.app;
 
-import be.intecbrussel.entities.animal_entities.*;
-import be.intecbrussel.entities.plant_entities.*;
-import be.intecbrussel.service.ForestNotebook;
+import be.intecbrussel.the_notebook.entities.animal_entities.*;
+import be.intecbrussel.the_notebook.entities.plant_entities.*;
+import be.intecbrussel.the_notebook.service.ForestNotebook;
 
 import java.util.*;
 

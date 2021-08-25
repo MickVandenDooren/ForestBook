@@ -1,4 +1,4 @@
-package be.intecbrussel.entities.plant_entities;
+package be.intecbrussel.the_notebook.entities.plant_entities;
 
 public class Plant {
 

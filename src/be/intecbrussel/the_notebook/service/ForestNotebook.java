@@ -1,10 +1,10 @@
-package be.intecbrussel.service;
+package be.intecbrussel.the_notebook.service;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import be.intecbrussel.entities.animal_entities.*;
-import be.intecbrussel.entities.plant_entities.*;
+import be.intecbrussel.the_notebook.entities.animal_entities.*;
+import be.intecbrussel.the_notebook.entities.plant_entities.*;
 
 public class ForestNotebook {
 

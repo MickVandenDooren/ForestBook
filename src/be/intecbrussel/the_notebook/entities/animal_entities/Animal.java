@@ -1,4 +1,4 @@
-package be.intecbrussel.entities.animal_entities;
+package be.intecbrussel.the_notebook.entities.animal_entities;
 
 public class Animal {
     private String name;

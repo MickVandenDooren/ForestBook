@@ -116,11 +116,11 @@ public class ForestNotebook {
             System.out.println("No animals in notebook");
         } else {
             System.out.println("["+ animalCount+ " different animals]");
-            System.out.println(herbivores.size() + " herbivore(s): ");
+            System.out.println(herbivores.size() + " HERBIVORES: ");
             herbivores.stream().map(Herbivore::getName).forEach(System.out::println);
-            System.out.println(carnivores.size() + " carnivore(s): ");
+            System.out.println(carnivores.size() + " CARNIVORES: ");
             carnivores.stream().map(Carnivore::getName).forEach(System.out::println);
-            System.out.println(omnivores.size() + " omnivore(s): ");
+            System.out.println(omnivores.size() + " OMNIVORES: ");
             omnivores.stream().map(Omnivore::getName).forEach(System.out::println);
         }
 
@@ -129,7 +129,8 @@ public class ForestNotebook {
 
     public void sortAnimalsByName() {
         System.out.println();
-        System.out.println("Animals being sorted...");
+        System.out.println("Animals being sorted by name...");
+        animals = animals.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
         herbivores = herbivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
         carnivores = carnivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
         omnivores = omnivores.stream().sorted(Comparator.comparing(Animal::getName)).collect(Collectors.toList());
@@ -137,9 +138,26 @@ public class ForestNotebook {
 
     public void sortPlantsByName() {
         System.out.println();
-        System.out.println("Plants being sorted...");
+        System.out.println("Plants being sorted by name...");
         plants = plants.stream().sorted(Comparator.comparing(Plant::getName)).collect(Collectors.toList());
     }
+
+    public void sortAnimalsByHeight(){
+        System.out.println();
+        System.out.println("Animals being sorted by height...");
+        animals = animals.stream().sorted(Comparator.comparing(Animal::getHeight)).collect(Collectors.toList());
+        herbivores = herbivores.stream().sorted(Comparator.comparing(Animal::getHeight)).collect(Collectors.toList());
+        carnivores = carnivores.stream().sorted(Comparator.comparing(Animal::getHeight)).collect(Collectors.toList());
+        omnivores = omnivores.stream().sorted(Comparator.comparing(Animal::getHeight)).collect(Collectors.toList());
+    }
+
+    public void sortPlantsByHeight(){
+        System.out.println();
+        System.out.println("Plants being sorted by height...");
+        plants = plants.stream().sorted(Comparator.comparing(Plant::getHeight)).collect(Collectors.toList());
+    }
+
+
 
 
 }

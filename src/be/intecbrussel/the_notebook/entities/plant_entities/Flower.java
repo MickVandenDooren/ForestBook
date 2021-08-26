@@ -12,7 +12,7 @@ public Flower (String name, double height){
     super(name,height);
 }
 
-    public Scent getSmell() {
+public Scent getSmell() {
         return smell;
     }
 

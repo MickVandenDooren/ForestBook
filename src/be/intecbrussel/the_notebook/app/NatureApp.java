@@ -13,7 +13,7 @@ public class NatureApp {
         ForestNotebook notebook = new ForestNotebook();
 
         //Adding 5 plants (at least 1 in each category)
-        Flower plant1 = new Flower("rose");
+        Flower plant1 = new Flower("rose",15);
         notebook.addPlant(plant1);
         plant1.setHeight(10);
         plant1.setSmell(Scent.SWEET);
@@ -31,7 +31,7 @@ public class NatureApp {
         plant4.setFruit("raspberry");
         notebook.addPlant(plant4);
 
-        Tree plant5 = new Tree("oak",750);
+        Tree plant5 = new Tree("oak tree",750);
         notebook.addPlant(plant5);
 
         //Adding 9 animals (3 for each category)
@@ -40,7 +40,6 @@ public class NatureApp {
         notebook.addAnimal(animal1);
 
         Carnivore animal2 = new Carnivore("fox",20,60,100);
-        animal2.setMaxFoodSize(120);
         notebook.addAnimal(animal2);
 
         Omnivore animal3 = new Omnivore("raccoon", 7,40,60);
@@ -53,7 +52,6 @@ public class NatureApp {
         notebook.addAnimal(animal5);
 
         Carnivore animal6 = new Carnivore("owl",4,50,170);
-        animal6.setMaxFoodSize(10);
         notebook.addAnimal(animal6);
 
         Carnivore animal7 = new Carnivore("black bear",110,150,230);
@@ -78,12 +76,15 @@ public class NatureApp {
         animal4.setPlantDiet(herbivoreDiet);
         animal9.setPlantDiet(herbivoreDiet);
 
-        //print out notebook
-        notebook.printNotebook();
+        //adding max size of prey to carnivore and omnivore animals
+        animal2.setMaxFoodSize(30);
+        animal3.setMaxFoodSize(15);
+        animal6.setMaxFoodSize(15);
+        animal7.setMaxFoodSize(90);
 
-        //sort animals
-        notebook.sortAnimalsByName();
-        notebook.sortPlantsByName();
+        //print out notebook
+        System.out.println();
+        notebook.printNotebook();
 
         //Check if duplicate-checks work
         Flower plant6 = new Flower("rose");
@@ -92,12 +93,30 @@ public class NatureApp {
         Herbivore animal10 = new Herbivore("rabbit",4,21,40);
         notebook.addAnimal(animal10);
 
+        //sort animals and plants by name
+        notebook.sortAnimalsByName();
+        notebook.sortPlantsByName();
+
         //Split output for easy recognition
         System.out.println();
         System.out.println("///////////////////");
-        System.out.println();
+
 
         //Print sorted notebook
+        System.out.println();
+        notebook.printNotebook();
+
+        //sort animals and plants by height
+        notebook.sortAnimalsByHeight();
+        notebook.sortPlantsByHeight();
+
+        //Split output for easy recognition
+        System.out.println();
+        System.out.println("///////////////////");
+
+
+        //Print sorted notebook
+        System.out.println();
         notebook.printNotebook();
     }
 }
